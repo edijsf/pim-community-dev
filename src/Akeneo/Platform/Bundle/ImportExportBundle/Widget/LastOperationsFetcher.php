@@ -44,7 +44,10 @@ class LastOperationsFetcher
      */
     public function fetch(): array
     {
-        $user = $this->tokenStorage->getToken()->getUser();
+        $user = null;
+        if (!$this->securityFacade->isGranted('pim_enrich_job_tracker_view_all_jobs')) {
+            $user = $this->tokenStorage->getToken()->getUser();
+        }
 
         $operations = $this->lastOperations->execute($user);
 
