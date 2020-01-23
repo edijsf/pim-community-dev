@@ -897,7 +897,7 @@ JSON;
                     ['locale' => null, 'scope' => null, 'data' => 'product_variant_creation_product_values'],
                 ],
                 'a_number_float' => [
-                    ['locale' => null, 'scope' => null, 'data' => '12.5000'],
+                    ['locale' => null, 'scope' => null, 'data' => '12.5000000000'],
                 ],
                 'a_price' => [
                     [
